@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FC690096-1DB3-4988-843D-A6DFE09A7527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebApi", "src\DotNetCoreWebApi\DotNetCoreWebApi.csproj", "{7D197825-2F0A-4FAF-BDF3-CF00513973D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebClient", "src\DotNetCoreWebClient\DotNetCoreWebClient.csproj", "{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D197825-2F0A-4FAF-BDF3-CF00513973D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D197825-2F0A-4FAF-BDF3-CF00513973D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D197825-2F0A-4FAF-BDF3-CF00513973D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D197825-2F0A-4FAF-BDF3-CF00513973D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D197825-2F0A-4FAF-BDF3-CF00513973D2} = {FC690096-1DB3-4988-843D-A6DFE09A7527}
+		{39BF88B7-EFD1-41E1-9D6D-50E51A935DEF} = {FC690096-1DB3-4988-843D-A6DFE09A7527}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AA6BC11-7E7B-4162-B644-D19AB0335862}
