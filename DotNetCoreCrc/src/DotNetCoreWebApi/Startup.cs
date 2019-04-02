@@ -27,8 +27,19 @@ namespace DotNetCoreWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+          
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["ConectionString:LabDb"]));
+          //  services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["DefaultConnection"]));
+            
+            services.AddDbContext<MeasurementContext>(options =>
+                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration[@"server=DESKTOP-JP06AIC\SQLEXPRES; database=:LabDb; trusted_connection=true"]));
+            /*services.AddDbContext<MeasurementContext>(options =>
+             options.UseSqlServer(
+                 @"Data Source=DESKTOP-JP06AIC\PATRYKSQL; Database = New; Trusted_Connection = True",
+          
+            b =>b.UseRowNumberForPaging()));
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
