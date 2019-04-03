@@ -29,10 +29,13 @@ namespace DotNetCoreWebApi
         {
           
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
           //  services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["DefaultConnection"]));
             
             services.AddDbContext<MeasurementContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("LabDb")));
+
+
             //services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration[@"server=DESKTOP-JP06AIC\SQLEXPRES; database=:LabDb; trusted_connection=true"]));
             /*services.AddDbContext<MeasurementContext>(options =>
              options.UseSqlServer(
