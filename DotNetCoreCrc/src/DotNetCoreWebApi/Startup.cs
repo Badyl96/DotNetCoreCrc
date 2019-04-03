@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotNetCoreWebApi.DbContexts;
+using DotNetCoreWebApi.Model;
+using DotNetCoreWebApi.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,7 +36,7 @@ namespace DotNetCoreWebApi
             
             services.AddDbContext<MeasurementContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("LabDb")));
-
+            services.AddScoped<IMeasurementRepository<Measurement>, MeasurementRepository>();
 
             //services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration[@"server=DESKTOP-JP06AIC\SQLEXPRES; database=:LabDb; trusted_connection=true"]));
             /*services.AddDbContext<MeasurementContext>(options =>
