@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotNetCoreWebApi.Repository
 {
-    public interface IMeasurementRepository<TEntity>
+    public interface IMeasurement<TEntity>
     {
         Task<IEnumerable<TEntity>> GetAll();
 
